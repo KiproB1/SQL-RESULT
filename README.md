@@ -1,1 +1,18 @@
+SQL QUERY
+CREATE DATABASE MyLibrary;
+
+USE MyLibrary;
+
+CREATE TABLE Books (
+  BookID INT PRIMARY KEY AUTO_INCREMENT,
+  Title VARCHAR(255) NOT NULL,
+  Author VARCHAR(255) NOT NULL,
+  Genre VARCHAR(50) NOT NULL,
+  PublicationYear INT NOT NULL
+);
 # SQL-RESULT
+SELECT * FROM Books
+WHERE PublicationYear = 2020;
+SELECT DISTINCT Genre FROM Books;
+SELECT Title, Author AS BookAuthor, Genre, PublicationYear
+FROM Books;
